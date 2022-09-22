@@ -13,15 +13,29 @@ class Book {
 
 let bookList = [];
 
+function removeBookFromUI(book) {
+  bookList = bookList.filter((item) => {
+    if (book === item) {
+      return false;
+    } return true;
+  });
+}
+
 function addBookToUI(book) {
   const string = `
   <div>
     <p>${book.title}</p>
     <p>${book.author}</p>
-    <button type="submit" id="remove">Remove</button>
+    <button type="submit" id="remove-btn">Remove</button>
   </div>
   `;
   const bookElement = parser.parseFromString(string, 'text/html').body.firstChild;
+  const removeBtn = bookElement.querySelector('#remove-btn');
+  removeBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    removeBookFromUI();
+    bookElement.remove(book);
+  });
   books.append(bookElement);
 }
 
