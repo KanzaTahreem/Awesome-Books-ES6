@@ -13,12 +13,15 @@ class Book {
 
 let bookList = [];
 
+localStorage.getItem('bookArray');
+
 function removeBookFromUI(book) {
   bookList = bookList.filter((item) => {
     if (book === item) {
       return false;
     } return true;
   });
+  localStorage.setItem('bookArray', JSON.stringify(bookList));
 }
 
 function addBookToUI(book) {
@@ -41,6 +44,7 @@ function addBookToUI(book) {
 
 function storeBook(newBook) {
   bookList.push(newBook);
+  localStorage.setItem('bookArray', JSON.stringify(bookList));
 }
 
 addBtn.addEventListener('click', (e) => {
