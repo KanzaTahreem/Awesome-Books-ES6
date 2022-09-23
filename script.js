@@ -33,7 +33,7 @@ function addBookToUI(book) {
   const removeBtn = bookElement.querySelector('#remove-btn');
   removeBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    removeBookFromUI();
+    removeBookFromUI(book);
     bookElement.remove(book);
   });
   books.append(bookElement);
