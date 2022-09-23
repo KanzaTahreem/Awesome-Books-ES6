@@ -13,8 +13,6 @@ class Book {
 
 let bookList = [];
 
-localStorage.getItem('bookArray');
-
 function removeBookFromUI(book) {
   bookList = bookList.filter((item) => {
     if (book === item) {
@@ -55,3 +53,13 @@ addBtn.addEventListener('click', (e) => {
   storeBook(newBook);
   addBookToUI(newBook);
 });
+
+const booksFromLocalStorage = localStorage.getItem('bookArray');
+if (booksFromLocalStorage !== null) {
+  const bookObjectList = JSON.parse(booksFromLocalStorage);
+  bookObjectList.forEach((bookObject) => {
+    const newBookObject = new Book(bookObject.title, bookObject.author);
+    bookList.push(newBookObject);
+  });
+}
+bookList.forEach((book) => addBookToUI(book));
