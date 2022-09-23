@@ -39,10 +39,15 @@ function addBookToUI(book) {
   books.append(bookElement);
 }
 
+function storeBook(newBook) {
+  bookList.push(newBook);
+}
+
 addBtn.addEventListener('click', (e) => {
   e.preventDefault();
   const newBook = new Book(titleInput.value, authorInput.value);
   titleInput.value = '';
   authorInput.value = '';
+  storeBook(newBook);
   addBookToUI(newBook);
 });
