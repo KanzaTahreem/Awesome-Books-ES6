@@ -24,9 +24,8 @@ function removeBookFromUI(book) {
 
 function addBookToUI(book) {
   const string = `
-  <div>
-    <p>${book.title}</p>
-    <p>${book.author}</p>
+  <div class="book-row">
+    <p>"${book.title}" by ${book.author}</p>
     <button type="submit" id="remove-btn">Remove</button>
   </div>
   `;
