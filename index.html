@@ -7,17 +7,43 @@
     <title>Awesome Books</title>
   </head>
   <body>
+    <header>
+      <h1>Awesome Books</h1>
+      <nav>
+        <a href="#books">List</a>
+        <a href="#form">Add New</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
     <section class="all-books">
       <h2>All Awesome Books</h2>
       <div id="books"></div>
     </section>
 
-    <form id="form">
+    <form id="form" class="hidden">
       <h2>Add a new book</h2>
       <input type="text" name="title" id="title-input" placeholder="Title" />
       <input type="text" name="author" id="author-input" placeholder="Author" />
-      <button type="submit" id="submit-button">Add</button>
+      <button type="submit" id="add-button">Add</button>
     </form>
+
+    <section id="contact" class="hidden">
+      <h2>Contact Information</h2>
+      <p>
+        Do you have any questions or just want to say "Hello"? <br />
+        You can reach out to us!
+      </p>
+      <ul>
+        <li>Our e-mail: mail@mail.com</li>
+        <li>Our phone number: 004358634422</li>
+        <li>Our addres: Streetname 22, 84503 City, Country</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>Copyright ...</p>
+    </footer>
     <script src="./script.js"></script>
   </body>
 </html>
