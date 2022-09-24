@@ -8,7 +8,8 @@ header,
 #books,
 .book-row,
 .all-books,
-#form {
+#form,
+#contact {
   display: flex;
   align-items: center;
 }
@@ -52,7 +53,8 @@ h2 {
 }
 
 .all-books,
-#form {
+#form,
+#contact {
   flex-direction: column;
   height: calc(100vh - 9em);
   justify-content: center;
@@ -107,6 +109,11 @@ input:focus {
 
 #add-button:hover {
   background-color: transparent;
+}
+
+#contact > p,
+#contact li {
+  margin-bottom: 1em;
 }
 
 footer {
