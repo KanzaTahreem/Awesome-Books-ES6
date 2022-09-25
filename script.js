@@ -12,7 +12,6 @@ class Book {
     this.author = author;
   }
 }
-
 class Methods {
   constructor() {
     this.bookList = [];
@@ -52,6 +51,16 @@ class Methods {
 
 const method = new Methods();
 
+const booksFromLocalStorage = localStorage.getItem('bookArray');
+if (booksFromLocalStorage !== null) {
+  const bookObjectList = JSON.parse(booksFromLocalStorage);
+  bookObjectList.forEach((bookObject) => {
+    const newBookObject = new Book(bookObject.title, bookObject.author);
+    method.bookList.push(newBookObject);
+    method.addBookToUI(newBookObject);
+  });
+}
+
 addBtn.addEventListener('click', (e) => {
   e.preventDefault();
   const newBook = new Book(titleInput.value, authorInput.value);
@@ -60,13 +69,3 @@ addBtn.addEventListener('click', (e) => {
   method.storeBook(newBook);
   method.addBookToUI(newBook);
 });
-
-const booksFromLocalStorage = localStorage.getItem('bookArray');
-if (booksFromLocalStorage !== null) {
-  const bookObjectList = JSON.parse(booksFromLocalStorage);
-  bookObjectList.forEach((bookObject) => {
-    const newBookObject = new Book(bookObject.title, bookObject.author);
-    method.bookList.push(newBookObject);
-  });
-}
-method.bookList.forEach((book) => method.addBookToUI(book));
