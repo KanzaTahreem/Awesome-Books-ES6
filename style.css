@@ -61,11 +61,15 @@ h2 {
 }
 
 .book-row {
-  width: 50%;
+  width: 60%;
   padding: 0.5em;
   margin-bottom: 1em;
   border-radius: 1.5em;
   border: 1px solid darkolivegreen;
+}
+
+.book-row p {
+  letter-spacing: 0.8px;
 }
 
 button {
