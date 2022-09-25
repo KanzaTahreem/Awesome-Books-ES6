@@ -4,6 +4,12 @@ const books = document.querySelector('#books');
 const titleInput = document.querySelector('#title-input');
 const authorInput = document.querySelector('#author-input');
 const addBtn = document.querySelector('#add-button');
+const listEl = document.querySelector('.list');
+const addNewEl = document.querySelector('.add-new');
+const contactEl = document.querySelector('.contact');
+const bookSection = document.querySelector('.all-books');
+const formSection = document.querySelector('#form');
+const contactSection = document.querySelector('#contact');
 const parser = new DOMParser();
 
 class Book {
@@ -68,4 +74,22 @@ addBtn.addEventListener('click', (e) => {
   authorInput.value = '';
   method.storeBook(newBook);
   method.addBookToUI(newBook);
+});
+
+listEl.addEventListener('click', (e) => {
+  bookSection.classList.remove('hidden');
+  formSection.classList.add('hidden');
+  contactSection.classList.add('hidden');
+});
+
+addNewEl.addEventListener('click', (e) => {
+  bookSection.classList.add('hidden');
+  formSection.classList.remove('hidden');
+  contactSection.classList.add('hidden');
+});
+
+contactEl.addEventListener('click', (e) => {
+  bookSection.classList.add('hidden');
+  formSection.classList.add('hidden');
+  contactSection.classList.remove('hidden');
 });
