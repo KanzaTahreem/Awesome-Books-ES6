@@ -76,20 +76,30 @@ addBtn.addEventListener('click', (e) => {
   method.addBookToUI(newBook);
 });
 
+const menuButtonsUpdate = (button) => {
+  document.querySelectorAll('.active').forEach((btn) => {
+    btn.classList.remove('active');
+  });
+  button.classList.add('active');
+};
+
 listEl.addEventListener('click', (e) => {
   bookSection.classList.remove('hidden');
   formSection.classList.add('hidden');
   contactSection.classList.add('hidden');
+  menuButtonsUpdate(e.target);
 });
 
 addNewEl.addEventListener('click', (e) => {
   bookSection.classList.add('hidden');
   formSection.classList.remove('hidden');
   contactSection.classList.add('hidden');
+  menuButtonsUpdate(e.target);
 });
 
 contactEl.addEventListener('click', (e) => {
   bookSection.classList.add('hidden');
   formSection.classList.add('hidden');
   contactSection.classList.remove('hidden');
+  menuButtonsUpdate(e.target);
 });
