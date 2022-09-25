@@ -63,9 +63,8 @@ h2 {
 .book-row {
   width: 50%;
   padding: 0.5em;
-  box-shadow: 0 0 5px darkolivegreen;
-  border-radius: 1.5em;
   margin-bottom: 1em;
+  border-radius: 1.5em;
   border: 1px solid darkolivegreen;
 }
 
@@ -123,4 +122,8 @@ footer {
 
 .hidden {
   display: none !important;
+}
+
+.active {
+  color: #ff01a2;
 }
