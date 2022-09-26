@@ -1,5 +1,14 @@
 import Book from './modules/book.js';
 import Methods from './modules/method.js';
+import { DateTime } from './modules/luxon.js';
+
+window.onload = () => {
+  const dateEl = document.querySelector('.date');
+  setInterval(() => {
+    const now = DateTime.now().toLocaleString(DateTime.DATETIME_FULL_WITH_SECONDS);
+    dateEl.innerHTML = now;
+  }, 1000);
+};
 
 const titleInput = document.querySelector('#title-input');
 const authorInput = document.querySelector('#author-input');
