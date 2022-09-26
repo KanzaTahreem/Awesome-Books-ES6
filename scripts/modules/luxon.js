@@ -1,5 +1,5 @@
 // these aren't really private, but nor are they really useful to document
-
+/* eslint-disable */
 /**
  * @private
  */
@@ -7075,3 +7075,4 @@ const VERSION = "3.0.4";
 
 export { DateTime, Duration, FixedOffsetZone, IANAZone, Info, Interval, InvalidZone, Settings, SystemZone, VERSION, Zone };
 //# sourceMappingURL=luxon.js.map
+/* eslint-enable */
