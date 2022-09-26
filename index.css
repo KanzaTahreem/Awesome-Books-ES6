@@ -56,7 +56,7 @@ h2 {
 
 #books {
   flex-direction: column;
-  width: 70%;
+  width: 100%;
   overflow-y: auto;
   margin-bottom: 4em;
 }
