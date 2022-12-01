@@ -2,7 +2,7 @@
 
 # Awesome Books
 
-> Restructured the [Awesome books](https://github.com/KanzaTahreem/Awesome-Books) app code by using modules. _Awesome books_ is a website that displays a list of books and allows users to add and remove books from the list.
+> Restructured the [Awesome books](https://github.com/KanzaTahreem/Awesome-Books) app code by using modules. _Awesome books_ is a website that displays a list of books and allows users to add or remove books from the list.
 
 ## Built With
 
